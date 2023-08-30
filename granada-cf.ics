@@ -1,0 +1,275 @@
+BEGIN:VCALENDAR
+BEGIN:VEVENT
+SUMMARY:Real Sociedad vs Granada CF
+DTSTART:20230902T120000Z
+DTEND:20230902T134500Z
+UID:temporada-2023-2024-laliga-easports-real-sociedad-granada-cf-4@sport-c
+ al.com
+LOCATION:Reale Arena. Paseo de Anoeta\, 1. 20014 Donostia-San Sebastián (
+ Gipuzkoa)
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs Girona FC
+DTSTART:20230918T190000Z
+DTEND:20230918T204500Z
+UID:temporada-2023-2024-laliga-easports-granada-cf-girona-fc-5@sport-cal.c
+ om
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:UD Las Palmas vs Granada CF
+DTSTART;VALUE=DATE:20230924
+UID:temporada-2023-2024-laliga-easports-ud-las-palmas-granada-cf-6@sport-c
+ al.com
+LOCATION:Calle Fondos de Segura\, s/n\, 35019 Las Palmas de Gran Canaria\,
+  Las Palmas
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs Real Betis
+DTSTART;VALUE=DATE:20230927
+UID:temporada-2023-2024-laliga-easports-granada-cf-real-betis-7@sport-cal.
+ com
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:UD Almería vs Granada CF
+DTSTART;VALUE=DATE:20231001
+UID:temporada-2023-2024-laliga-easports-ud-almeria-granada-cf-8@sport-cal.
+ com
+LOCATION:Calle Alcalde Santiago Martínez Cabrejas\, 5\, 04007 Almería
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs FC Barcelona
+DTSTART;VALUE=DATE:20231008
+UID:temporada-2023-2024-laliga-easports-granada-cf-fc-barcelona-9@sport-ca
+ l.com
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:CA Osasuna vs Granada CF
+DTSTART;VALUE=DATE:20231022
+UID:temporada-2023-2024-laliga-easports-ca-osasuna-granada-cf-10@sport-cal
+ .com
+LOCATION:C/ Sadar\, s/n\, Pamplona (Navarra)
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs Villarreal CF
+DTSTART;VALUE=DATE:20231029
+UID:temporada-2023-2024-laliga-easports-granada-cf-villarreal-cf-11@sport-
+ cal.com
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Valencia CF vs Granada CF
+DTSTART;VALUE=DATE:20231105
+UID:temporada-2023-2024-laliga-easports-valencia-cf-granada-cf-12@sport-ca
+ l.com
+LOCATION:Camp de Mestalla. Avenida de Suecia s/n. 46010 Valencia
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs Getafe CF
+DTSTART;VALUE=DATE:20231112
+UID:temporada-2023-2024-laliga-easports-granada-cf-getafe-cf-13@sport-cal.
+ com
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Deportivo Alavés vs Granada CF
+DTSTART;VALUE=DATE:20231126
+UID:temporada-2023-2024-laliga-easports-deportivo-alaves-granada-cf-14@spo
+ rt-cal.com
+LOCATION:Estadio de Mendizorroza. Paseo Cervantes\, s/n. 01013 Vitoria-Gas
+ téiz (Álava)
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Real Madrid vs Granada CF
+DTSTART;VALUE=DATE:20231203
+UID:temporada-2023-2024-laliga-easports-real-madrid-granada-cf-15@sport-ca
+ l.com
+LOCATION:Estadio Santiago Bernabéu. Calle Concha Espina s/n. 28036 Madrid
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs Athletic Club
+DTSTART;VALUE=DATE:20231210
+UID:temporada-2023-2024-laliga-easports-granada-cf-athletic-club-16@sport-
+ cal.com
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:RC Celta vs Granada CF
+DTSTART;VALUE=DATE:20231217
+UID:temporada-2023-2024-laliga-easports-rc-celta-granada-cf-17@sport-cal.c
+ om
+LOCATION:Estadio Municipal de Balaidos. Avenida de Balaidos s/n. 36210 Vig
+ o (Pontevedra).
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs Sevilla FC
+DTSTART;VALUE=DATE:20231220
+UID:temporada-2023-2024-laliga-easports-granada-cf-sevilla-fc-18@sport-cal
+ .com
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs Cádiz CF
+DTSTART;VALUE=DATE:20240103
+UID:temporada-2023-2024-laliga-easports-granada-cf-cadiz-cf-19@sport-cal.c
+ om
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Real Betis vs Granada CF
+DTSTART;VALUE=DATE:20240114
+UID:temporada-2023-2024-laliga-easports-real-betis-granada-cf-20@sport-cal
+ .com
+LOCATION:Estadio Benito Villamarín. Avda. de Heliópolis s/n. 41012 Sevil
+ la
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs Atlético de Madrid
+DTSTART;VALUE=DATE:20240121
+UID:temporada-2023-2024-laliga-easports-granada-cf-atletico-de-madrid-21@s
+ port-cal.com
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Getafe CF vs Granada CF
+DTSTART;VALUE=DATE:20240128
+UID:temporada-2023-2024-laliga-easports-getafe-cf-granada-cf-22@sport-cal.
+ com
+LOCATION:Coliseum Alfonso Pérez. Avenida Teresa de Calcuta s/n. 28903 Get
+ afe
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs UD Las Palmas
+DTSTART;VALUE=DATE:20240204
+UID:temporada-2023-2024-laliga-easports-granada-cf-ud-las-palmas-23@sport-
+ cal.com
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:FC Barcelona vs Granada CF
+DTSTART;VALUE=DATE:20240211
+UID:temporada-2023-2024-laliga-easports-fc-barcelona-granada-cf-24@sport-c
+ al.com
+LOCATION:Passeig Olímpic\, 15-17\, 08038
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs UD Almería
+DTSTART;VALUE=DATE:20240218
+UID:temporada-2023-2024-laliga-easports-granada-cf-ud-almeria-25@sport-cal
+ .com
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs Valencia CF
+DTSTART;VALUE=DATE:20240225
+UID:temporada-2023-2024-laliga-easports-granada-cf-valencia-cf-26@sport-ca
+ l.com
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Villarreal CF vs Granada CF
+DTSTART;VALUE=DATE:20240303
+UID:temporada-2023-2024-laliga-easports-villarreal-cf-granada-cf-27@sport-
+ cal.com
+LOCATION:Estadio de la Cerámica. Calle Blasco Ibáñez\, 2. 12540 Vila-Re
+ al (Castellón)
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs Real Sociedad
+DTSTART;VALUE=DATE:20240310
+UID:temporada-2023-2024-laliga-easports-granada-cf-real-sociedad-28@sport-
+ cal.com
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:RCD Mallorca vs Granada CF
+DTSTART;VALUE=DATE:20240317
+UID:temporada-2023-2024-laliga-easports-rcd-mallorca-granada-cf-29@sport-c
+ al.com
+LOCATION:Camí dels Reis\, s/n. 07011 Palma de Mallorca
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cádiz CF vs Granada CF
+DTSTART;VALUE=DATE:20240331
+UID:temporada-2023-2024-laliga-easports-cadiz-cf-granada-cf-30@sport-cal.c
+ om
+LOCATION:Estadio Nuevo Mirandilla\, Plaza de Madrid s/n 11010 Cádiz
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs Deportivo Alavés
+DTSTART;VALUE=DATE:20240414
+UID:temporada-2023-2024-laliga-easports-granada-cf-deportivo-alaves-31@spo
+ rt-cal.com
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Athletic Club vs Granada CF
+DTSTART;VALUE=DATE:20240421
+UID:temporada-2023-2024-laliga-easports-athletic-club-granada-cf-32@sport-
+ cal.com
+LOCATION:San Mamés - Felipe Serrate s/n. Bilbao 48013
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs CA Osasuna
+DTSTART;VALUE=DATE:20240428
+UID:temporada-2023-2024-laliga-easports-granada-cf-ca-osasuna-33@sport-cal
+ .com
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sevilla FC vs Granada CF
+DTSTART;VALUE=DATE:20240505
+UID:temporada-2023-2024-laliga-easports-sevilla-fc-granada-cf-34@sport-cal
+ .com
+LOCATION:Estadio Ramón Sánchez Pizjuán. C/ Sevilla Fútbol Club s/n. Se
+ villa
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs Real Madrid
+DTSTART;VALUE=DATE:20240512
+UID:temporada-2023-2024-laliga-easports-granada-cf-real-madrid-35@sport-ca
+ l.com
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Rayo Vallecano vs Granada CF
+DTSTART;VALUE=DATE:20240515
+UID:temporada-2023-2024-laliga-easports-rayo-vallecano-granada-cf-36@sport
+ -cal.com
+LOCATION:Estadio de Vallecas. Calle Payaso Fofó s/n. 28018 Madrid
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Granada CF vs RC Celta
+DTSTART;VALUE=DATE:20240519
+UID:temporada-2023-2024-laliga-easports-granada-cf-rc-celta-37@sport-cal.c
+ om
+LOCATION:Calle Pintor Manuel Maldonado s/n (Estadio  Los Cármenes) 18007 
+ Granada
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Girona FC vs Granada CF
+DTSTART;VALUE=DATE:20240526
+UID:temporada-2023-2024-laliga-easports-girona-fc-granada-cf-38@sport-cal.
+ com
+LOCATION:Estadi Municipal de Montilivi. Avda. de Montilivi\, 141. 17003 Gi
+ rona
+END:VEVENT
+END:VCALENDAR
