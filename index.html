@@ -1,7 +1,49 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Placeholder</h1>
-<p>I am being constructed. Please come back again in a few days, months, or years. who knows?</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TalkTimer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="screen screen--config" id="screen-config" aria-labelledby="config-title">
+        <h1 id="config-title">Configure Countdown</h1>
+        <form id="config-form" novalidate>
+          <div class="field-group">
+            <label for="start-time">Start Time</label>
+            <input id="start-time" name="startTime" type="text" value="10:00" inputmode="numeric" required />
+            <p class="field-help">Enter a value in MM:SS format.</p>
+          </div>
+
+          <div class="field-group">
+            <label for="warning-time">Warning Phase Start Time</label>
+            <input id="warning-time" name="warningStartTime" type="text" value="01:00" inputmode="numeric" required />
+            <p class="field-help">The warning time must be earlier than the total countdown duration.</p>
+          </div>
+
+          <button class="button button--primary" type="submit">Start Countdown</button>
+        </form>
+        <p class="status-message" id="form-status" aria-live="polite"></p>
+      </section>
+
+      <section class="screen screen--countdown hidden" id="screen-countdown" aria-labelledby="countdown-title">
+        <p class="screen-label">Countdown</p>
+        <h2 class="timer-display" id="countdown-title">00:00</h2>
+        <p class="screen-subtext" id="countdown-state">State: Normal</p>
+      </section>
+
+      <section class="screen screen--complete hidden" id="screen-complete" aria-labelledby="complete-title">
+        <h2 id="complete-title">Time over</h2>
+        <p class="screen-subtext">The countdown has finished.</p>
+        <div class="actions">
+          <button class="button button--secondary" id="restart-button" type="button">Restart Countdown</button>
+          <button class="button button--primary" id="configure-button" type="button">Return to Configuration</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
 </html>
