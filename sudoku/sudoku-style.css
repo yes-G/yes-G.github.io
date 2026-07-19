@@ -1,0 +1,103 @@
+/* Base styles and Pastel Theme */
+:root {
+    --pastel-mint-light: #e0f7fa; /* Lightest shade for empty cells or base */
+    --pastel-mint-medium: #b2f2ca; /* Slightly darker shade, perhaps for filled cells */
+    --pastel-mint-darker: #80eaa0; /* For pre-filled cells (AC 6) */
+    --border-color: #ccc;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 20px;
+    background-color: #f4f4f9; /* Overall page background */
+}
+
+h1 {
+    color: #333;
+}
+
+#sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    width: 90vmin; /* Make it responsive based on viewport size */
+    height: 90vmin;
+    border: 4px solid #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.cell {
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--pastel-mint-light); /* Default empty cell color */
+    transition: background-color 0.2s;
+}
+
+.cell:nth-child(9n + 1),
+.cell:nth-child(9n + 2),
+.cell:nth-child(9n + 3),
+.cell:nth-child(9n + 4),
+.cell:nth-child(9n + 5),
+.cell:nth-child(9n + 6),
+.cell:nth-child(9n + 7),
+.cell:nth-child(9n + 8),
+.cell:nth-child(9n + 9) {
+    border-left: 1px solid var(--border-color);
+}
+
+.cell:nth-child(3n) {
+    border-right: 3px solid #4b5563;
+}
+
+.cell:nth-child(9n) {
+    border-right: 0px solid #333;
+}
+
+.cell:nth-child(n + 19):nth-child(-n + 27),
+.cell:nth-child(n + 46):nth-child(-n + 54),
+.cell:nth-child(n + 73):nth-child(-n + 81) {
+    border-bottom: 3px solid #4b5563;
+}
+
+.cell:nth-child(n + 73):nth-child(-n + 81) {
+    border-bottom: 0px solid #333;
+}
+
+/* Styling for pre-filled cells (AC 6) */
+.cell.pre-filled {
+    background-color: var(--pastel-mint-darker);
+    color: #1a237e; /* Darker text color for contrast */
+}
+
+/* Style for input fields in editable cells (AC 3) */
+.cell input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-size: inherit;
+    font-weight: inherit;
+    background-color: transparent; /* Input background is transparent */
+    color: #00796b; /* Text color for input */
+}
+
+/* Ensure the grid itself scales correctly when inside the body constraints */
+@media (min-width: 600px) {
+    body {
+        margin: 40px;
+    }
+    #sudoku-grid {
+        width: 50vmin; /* Adjust size for larger screens if desired, keeping responsiveness in mind */
+        height: 50vmin;
+    }
+}
