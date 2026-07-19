@@ -51,10 +51,10 @@ function updateCountdownView() {
 
   if (state.phase === 'warning') {
     screenCountdown.classList.add('warning');
-    countdownState.textContent = 'State: Warning';
+    countdownState.textContent = 'Warning';
   } else {
     screenCountdown.classList.remove('warning');
-    countdownState.textContent = 'State: Normal';
+    countdownState.textContent = '';
   }
 }
 
@@ -99,7 +99,7 @@ configForm.addEventListener('submit', (event) => {
     const warningStartSeconds = parseTimeInput(document.getElementById('warning-time').value);
 
     if (warningStartSeconds >= startTimeSeconds) {
-      throw new Error('Warning time must be earlier than the start time.');
+      throw new Error('Warning time must be smaller than the start time.');
     }
 
     state.config = {

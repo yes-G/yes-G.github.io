@@ -20,7 +20,7 @@
           <div class="field-group">
             <label for="warning-time">Warning Phase Start Time</label>
             <input id="warning-time" name="warningStartTime" type="text" value="01:00" inputmode="numeric" required />
-            <p class="field-help">The warning time must be earlier than the total countdown duration.</p>
+            <p class="field-help">The warning time must be smaller than the total countdown duration.</p>
           </div>
 
           <button class="button button--primary" type="submit">Start Countdown</button>
@@ -29,14 +29,14 @@
       </section>
 
       <section class="screen screen--countdown hidden" id="screen-countdown" aria-labelledby="countdown-title">
-        <p class="screen-label">Countdown</p>
+        <p class="screen-label"></p>
         <h2 class="timer-display" id="countdown-title">00:00</h2>
-        <p class="screen-subtext" id="countdown-state">State: Normal</p>
+        <p class="screen-subtext" id="countdown-state"></p>
       </section>
 
       <section class="screen screen--complete hidden" id="screen-complete" aria-labelledby="complete-title">
         <h2 id="complete-title">Time over</h2>
-        <p class="screen-subtext">The countdown has finished.</p>
+        <p class="screen-subtext"></p>
         <div class="actions">
           <button class="button button--secondary" id="restart-button" type="button">Restart Countdown</button>
           <button class="button button--primary" id="configure-button" type="button">Return to Configuration</button>
