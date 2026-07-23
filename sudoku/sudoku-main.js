@@ -36,6 +36,10 @@ function loadPuzzleData(puzzleData) {
 
 let sudokuGrid = [];
 let activeInputCell = null;
+let timerStarted = false;
+let timerElapsedMs = 0;
+let timerIntervalId = null;
+let timerDisplay = null;
 
 function isValidCellValue(value) {
     const numericValue = Number.parseInt(value, 10);
@@ -90,6 +94,71 @@ function updateGridCellValue(rowIndex, colIndex, value) {
     sudokuGrid[rowIndex][colIndex] = value;
 }
 
+function formatTimerValue(totalMilliseconds) {
+    const totalSeconds = Math.min(Math.floor(totalMilliseconds / 1000), 99959);
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    const hundredths = Math.floor((totalMilliseconds % 1000) / 10);
+    return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(hundredths).padStart(2, '0')}`;
+}
+
+function updateTimerDisplay() {
+    if (!timerDisplay) {
+        return;
+    }
+
+    timerDisplay.textContent = `Time: ${formatTimerValue(timerElapsedMs)}`;
+}
+
+function startTimer() {
+    if (timerStarted) {
+        return;
+    }
+
+    timerStarted = true;
+    const startTime = Date.now() - timerElapsedMs;
+    timerIntervalId = window.setInterval(() => {
+        timerElapsedMs = Date.now() - startTime;
+        if (timerElapsedMs >= 99959000) {
+            timerElapsedMs = 99959000;
+            stopTimer();
+        }
+        updateTimerDisplay();
+    }, 10);
+}
+
+function stopTimer() {
+    if (timerIntervalId !== null) {
+        window.clearInterval(timerIntervalId);
+        timerIntervalId = null;
+    }
+}
+
+function resetTimer() {
+    stopTimer();
+    timerStarted = false;
+    timerElapsedMs = 0;
+    updateTimerDisplay();
+}
+
+function isPuzzleComplete() {
+    return sudokuGrid.every((row) => row.every((value) => value > 0));
+}
+
+function handleTimerState(value) {
+    if (value === '' || value === null || value === undefined) {
+        return;
+    }
+
+    if (!timerStarted) {
+        startTimer();
+    }
+
+    if (isPuzzleComplete()) {
+        stopTimer();
+    }
+}
+
 function validateInputCell(rowIndex, colIndex, value) {
     const normalizedValue = normalizeCellValue(value);
     updateGridCellValue(rowIndex, colIndex, normalizedValue);
@@ -100,6 +169,8 @@ function validateInputCell(rowIndex, colIndex, value) {
     if (cell) {
         cell.dataset.ruleViolation = hasViolation ? 'true' : 'false';
     }
+
+    handleTimerState(value);
 }
 
 function createCellElement(value, rowIndex, colIndex) {
@@ -154,6 +225,9 @@ function renderGrid(grid, container) {
             container.appendChild(createCellElement(value, rowIndex, colIndex));
         });
     });
+
+    resetTimer();
+    updateTimerDisplay();
 }
 
 function handleDocumentClick(event) {
@@ -174,19 +248,85 @@ function handleDocumentClick(event) {
     activeInputCell = null;
 }
 
+function getIstDateParts() {
+    const now = new Date();
+    const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000);
+    const istTime = new Date(utcTime + (5.5 * 60 * 60000));
+
+    return {
+        year: istTime.getUTCFullYear(),
+        month: String(istTime.getUTCMonth() + 1).padStart(2, '0'),
+        day: String(istTime.getUTCDate()).padStart(2, '0')
+    };
+}
+
+function getPuzzleFileCandidates() {
+    const { year, month, day } = getIstDateParts();
+    const dateStamp = `${year}${month}${day}`;
+
+    return [
+        `data/${dateStamp}Q.txt`,
+        `data/${dateStamp}.txt`,
+        'data/puzzle.txt'
+    ];
+}
+
+async function loadPuzzleFromToday() {
+    const candidates = getPuzzleFileCandidates();
+
+    for (const filePath of candidates) {
+        try {
+            const response = await fetch(filePath);
+            if (!response.ok) {
+                continue;
+            }
+
+            return await response.text();
+        } catch (error) {
+            continue;
+        }
+    }
+
+    throw new Error('Unable to load puzzle data from available sources.');
+}
+
+function updatePageHeading() {
+    const heading = document.querySelector('h1');
+    if (!heading) {
+        return;
+    }
+
+    const { year, month, day } = getIstDateParts();
+    heading.textContent = `Daily Sudoku: ${year}-${month}-${day}`;
+}
+
+function initializeTimerDisplay() {
+    if (timerDisplay) {
+        return;
+    }
+
+    timerDisplay = document.createElement('div');
+    timerDisplay.id = 'timer-display';
+    timerDisplay.className = 'timer-display';
+    timerDisplay.textContent = 'Time: 00:00.00';
+
+    const container = document.getElementById('sudoku-grid');
+    if (container && container.parentNode) {
+        container.parentNode.insertBefore(timerDisplay, container.nextSibling);
+    }
+}
+
 async function initializePuzzle() {
     const container = document.getElementById('sudoku-grid');
     if (!container) {
         return;
     }
 
-    try {
-        const response = await fetch('data/puzzle.txt');
-        if (!response.ok) {
-            throw new Error(`Unable to load puzzle data: ${response.status}`);
-        }
+    updatePageHeading();
+    initializeTimerDisplay();
 
-        const puzzleData = await response.text();
+    try {
+        const puzzleData = await loadPuzzleFromToday();
         const grid = loadPuzzleData(puzzleData);
         renderGrid(grid, container);
     } catch (error) {
@@ -210,6 +350,11 @@ if (typeof module !== 'undefined' && module.exports) {
         loadPuzzleData,
         createCellElement,
         renderGrid,
-        initializePuzzle
+        initializePuzzle,
+        getIstDateParts,
+        getPuzzleFileCandidates,
+        loadPuzzleFromToday,
+        updatePageHeading,
+        initializeTimerDisplay
     };
 }

@@ -31,6 +31,13 @@ h1 {
     overflow: hidden;
 }
 
+.timer-display {
+    margin-top: 16px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2f4f4f;
+}
+
 .cell {
     border: 1px solid var(--border-color);
     display: flex;
